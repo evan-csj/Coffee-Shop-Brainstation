@@ -1,0 +1,52 @@
+:root {
+  --nitro-blue: #5BACC3;
+  --nitro-pink: #FFF0ED;
+  --light-gray: #F7F7F7;
+  --graphite: #393939;
+  --primary:var(--graphite);
+  --secondary: white;
+  --highlight: var(--nitro-blue);
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 33px;
+  font-weight: 300;
+}
+
+nav {
+  font-size: 21px;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  max-width: 300px;
+  max-height: 180px;
+  min-width: 280px;
+  min-height: 180px;
+  background-color: var(--graphite);
+}
+
+.title-bg {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2)), url("../assets/images/coffee-circle.jpg");
+  max-width: 100%;
+  max-height: 600px;
+  min-width: 100%;
+  min-height: 575px;
+  background-position: center;
+  background-size: cover;
+}/*# sourceMappingURL=menu.css.map */
