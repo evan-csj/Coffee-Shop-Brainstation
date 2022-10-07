@@ -1,0 +1,50 @@
+:root {
+    --nitro-blue: #5BACC3;
+    --nitro-pink: #FFF0ED;
+    --light-gray: #F7F7F7;
+    --graphite: #393939;
+    --primary:var(--graphite);
+    --secondary: white;
+    --highlight: var(--nitro-blue);
+    
+}
+
+body {
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 33px;
+    font-weight: 300;
+}
+
+nav {
+    font-size: 21px;
+}
+
+p {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    min-width: 50px;
+    max-width: 120px;
+}
+
+.price {
+    color: var(--nitro-blue);
+}

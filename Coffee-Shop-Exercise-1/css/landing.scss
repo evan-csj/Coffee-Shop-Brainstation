@@ -1,0 +1,33 @@
+header {
+    &>div {
+        background-color: var(--nitro-pink);
+    }
+    
+}
+
+span {
+    font-weight: 700;
+}
+
+.click-button {
+    background-color: var(--nitro-blue);
+    color: white;
+    border: 0px;
+}
+
+.product-img {
+    min-height: 240px;
+    max-height: 550px;
+}
+
+.discount {
+    text-align: center;
+    background-color: var(--graphite);
+    margin: 0;
+    color: white;
+    font-size: 45px;
+}
+
+footer {
+    background-color: var(--nitro-pink);
+}
