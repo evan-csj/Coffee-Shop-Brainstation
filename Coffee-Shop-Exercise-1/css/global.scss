@@ -6,7 +6,10 @@
     --primary:var(--graphite);
     --secondary: white;
     --highlight: var(--nitro-blue);
-    
+}
+
+* {
+    margin: 0;
 }
 
 body {
@@ -21,7 +24,6 @@ h1, h2 {
 }
 
 h3 {
-    margin: 0;
     font-size: 33px;
     font-weight: 300;
 }
@@ -42,9 +44,6 @@ a {
 }
 
 header {
-    h2 {
-        margin: 0;
-    }
     a {
         color: var(--graphite);
     }
