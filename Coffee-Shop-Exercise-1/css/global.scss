@@ -10,6 +10,7 @@
 }
 
 body {
+    margin: 0;
     font-family: 'Open Sans';
     font-weight: 400;
 }
@@ -20,31 +21,56 @@ h1, h2 {
 }
 
 h3 {
+    margin: 0;
     font-size: 33px;
     font-weight: 300;
 }
 
 nav {
     font-size: 21px;
+    li {
+        display: inline;
+    }
 }
 
 p {
     font-size: 18px;
 }
 
-ul {
-    list-style: none;
-}
-
 a {
     text-decoration: none;
 }
 
-.icon {
-    min-width: 50px;
-    max-width: 120px;
+header {
+    h2 {
+        margin: 0;
+    }
+    a {
+        color: var(--graphite);
+    }
+
+    .nav-top {
+        display: inline-block;
+        padding-left: 1%;
+        img {
+            min-width: 50px;
+            max-width: 120px;
+        }
+    }
+
+    nav.nav-top {
+        li {
+            padding-right: 2em;
+            &:last-child {
+                a {
+                    color: var(--nitro-blue);
+                }
+            }
+        }
+    }
 }
 
 .price {
+    margin: 0 auto;
     color: var(--nitro-blue);
 }
