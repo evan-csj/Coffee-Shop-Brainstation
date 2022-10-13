@@ -5,20 +5,49 @@ header {
     
 }
 
-span {
-    font-weight: 700;
-}
-
 button {
+    min-width: 180px;
+    max-width: 80%;
+    padding: 20px;
     background-color: var(--nitro-blue);
     color: white;
     border: 0px;
+    font-size: 21px;
+    font-weight: 400;
+    display: block;
 }
 
-.product-img {
-    min-height: 240px;
-    max-height: 550px;
+.cards {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(420px, 1fr));
+    grid-gap: 20px;
 }
+
+.card {
+    min-width: 330px;
+    max-width: 350px;
+    min-height: 440px;
+    max-height: 460px;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    justify-self: center;
+    // grid-template-rows: max-content 200px 1fr;
+    box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25);
+
+    img {
+        object-fit: cover;
+        margin: 0 auto;
+        min-height: 240px;
+        max-height: 550px;
+    }
+    h3, p {
+        text-align: center;
+    }
+}
+
 
 .discount {
     text-align: center;
@@ -26,6 +55,9 @@ button {
     margin: 0;
     color: white;
     font-size: 45px;
+    span {
+        font-weight: 700;
+    }
 }
 
 footer {

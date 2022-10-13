@@ -1,10 +1,9 @@
 header {
     background-color: var(--nitro-pink);
-    margin: 0;
 }
 
 h1 {
-    margin: 0 auto;
+    margin: 20px auto;
     color: white;
     text-align: center;
     max-width: 300px;
@@ -28,22 +27,17 @@ h1 {
     text-align: center;
     max-width: 100%;
     min-width: 100%;
+    max-height: 80px;
+    min-height: 60px;
     background-color: var(--graphite);
     color: white;
     ul {
         li {
-            &:before {
-                content: "|";
-                top: -2px;
-                font-size: 120%;
-                position: relative;
-                font-weight: 900;
-                color: var(--nitro-blue);
-            }
+            border-left: 4px solid var(--nitro-blue);
             a {
                 display: inline-block;
                 color: white;
-                padding: 2%;
+                padding: 20px;
                 text-transform: uppercase;
             }
         }
