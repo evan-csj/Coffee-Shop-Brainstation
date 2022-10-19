@@ -1,13 +1,28 @@
-$nitro-blue: #5BACC3;
-$nitro-pink: #FFF0ED;
-$light-gray: #F7F7F7;
-$graphite: #393939;
-$primary: $graphite;
-$secondary: white;
-$highlight: $nitro-blue;
+@import "variables";
 
 * {
     margin: 0;
+}
+
+header {
+    a {
+        color: $graphite;
+    }
+
+    h2 {
+        display: inline-block;
+        padding-left: 1%;
+    }
+
+    nav {
+        @media screen and (max-width: 450px) {
+            display: block;
+        }
+
+        @media screen and (min-width: 450px) {
+            display: inline-block;
+        }
+    }
 }
 
 body {
@@ -27,30 +42,20 @@ h3 {
 
 nav {
     font-size: 21px;
+    ul {
+        list-style-type: none;
+    }
     li {
-        display: inline;
-    }
-}
+        @media screen and (max-width: 450px) {
+            margin-left: 10%;
+        }
 
-p {
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-}
-
-header {
-    a {
-        color: $graphite;
+        @media screen and (min-width: 450px) {
+            display: inline;
+        }
     }
 
-    .nav-top {
-        display: inline-block;
-        padding-left: 1%;
-    }
-
-    nav.nav-top {
+    &.nav-top {
         li {
             padding-right: 2em;
             &:last-child {
@@ -60,6 +65,14 @@ header {
             }
         }
     }
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
