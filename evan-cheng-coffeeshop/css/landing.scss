@@ -1,5 +1,13 @@
+$nitro-blue: #5BACC3;
+$nitro-pink: #FFF0ED;
+$light-gray: #F7F7F7;
+$graphite: #393939;
+$primary: $graphite;
+$secondary: white;
+$highlight: $nitro-blue;
+
 header {
-    background-color: var(--nitro-pink);
+    background-color: $nitro-pink;
     section:nth-child(2) {
         display: grid;
         @media screen and (max-width: 960px) {
@@ -45,7 +53,7 @@ header {
 main {
     section:not(:last-child) {
         text-align: center;
-        background-color: var(--light-gray);
+        background-color: $light-gray;
     }
 
     section:nth-child(2n+1) {
@@ -93,7 +101,7 @@ main {
     padding: 20px;
     margin: 10% auto;
     text-align: center;
-    background-color: var(--graphite);
+    background-color: $graphite;
     color: white;
     p{
         font-size: 45px;
@@ -104,7 +112,7 @@ main {
 }
 
 footer {
-    background-color: var(--nitro-pink);
+    background-color: $nitro-pink;
     h3 {
         margin-bottom: 0.5em;
     }

@@ -1,5 +1,13 @@
+$nitro-blue: #5BACC3;
+$nitro-pink: #FFF0ED;
+$light-gray: #F7F7F7;
+$graphite: #393939;
+$primary: $graphite;
+$secondary: white;
+$highlight: $nitro-blue;
+
 header {
-    background-color: var(--nitro-pink);
+    background-color: $nitro-pink;
 }
 
 h1 {
@@ -10,7 +18,7 @@ h1 {
     max-height: 180px;
     min-width: 280px;
     min-height: 180px;
-    background-color: var(--graphite);
+    background-color: $graphite;
 }
 
 .title-bg {
@@ -29,11 +37,11 @@ h1 {
     min-width: 100%;
     max-height: 80px;
     min-height: 60px;
-    background-color: var(--graphite);
+    background-color: $graphite;
     color: white;
     ul {
         li {
-            border-left: 4px solid var(--nitro-blue);
+            border-left: 4px solid $nitro-blue;
             a {
                 display: inline-block;
                 color: white;
@@ -51,11 +59,11 @@ main {
             padding-bottom: 5%;
         }
         &:nth-child(2n+1) {
-            background-color: var(--nitro-pink);
+            background-color: $nitro-pink;
         }
 
         &:nth-child(2n) {
-            background-color: var(--light-gray);
+            background-color: $light-gray;
         }
 
         h2, h3 {
