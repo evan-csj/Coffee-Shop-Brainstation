@@ -2,7 +2,14 @@ header {
     background-color: var(--nitro-pink);
     section:nth-child(2) {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+        @media screen and (max-width: 960px) {
+            grid-template-columns: repeat(1, minmax(480px, 1fr));
+        }
+        
+        @media screen and (min-width: 960px) {
+            grid-template-columns: repeat(2, minmax(480px, 1fr));
+        }
+
 
         div:nth-child(1) {
             padding: 20% 0 20% 100px;
@@ -20,12 +27,13 @@ header {
 
         div:nth-child(2) {
             margin: auto 0;
-            width: 480px;
+            width: auto;
             @media screen and (max-width: 960px) {
-                margin: auto auto auto 100px;
+                margin: auto auto 5% 100px;
             }
             @media screen and (min-width: 960px) {
                 padding-left: 20vw;
+                margin: auto 0;
             }
             img {
                 width: 20vw;
