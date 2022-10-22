@@ -61,35 +61,45 @@ main {
     }
 }
 
-.cards {
+.products {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     grid-gap: 20px;
+
+    &__card {
+        background-color: white;
+        min-width: 330px;
+        max-width: 350px;
+        min-height: 440px;
+        max-height: 460px;
+        padding: 20px;
+        border-radius: 10px;
+        justify-self: center;
+        box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25);
+        transition: box-shadow 0.15s, transform 0.15s;
+        touch-action: manipulation;
+        will-change: box-shadow, transform;
+
+        &:hover {
+            box-shadow: 0 5px 5px -1px rgba(0,0,0,0.5), 0 10px 15px -1px rgba(0,0,0,0.25);
+            transform: translateY(-5px);
+        }
+
+        img {
+            height: 250px;
+            padding-top: 5%;
+        }
+
+        h3, p {
+            padding-top: 5%;
+            text-align: center;
+            font-size: 33px;
+        }
+    }
 }
 
-.card {
-    background-color: white;
-    min-width: 330px;
-    max-width: 350px;
-    min-height: 440px;
-    max-height: 460px;
-    padding: 20px;
-    border-radius: 10px;
-    display: grid;
-    justify-self: center;
-    box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25);
 
-    img {
-        object-fit: cover;
-        margin: 5% auto;
-        min-height: 240px;
-        max-height: 550px;
-    }
-    h3, p {
-        text-align: center;
-    }
-}
 
 .discount {
     max-width: 90%;
