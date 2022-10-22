@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+}
+
+.nav-bar a {
+  color: #393939;
+}
+.nav-bar h2 {
+  display: inline-block;
+  padding-left: 1%;
+}
+@media screen and (max-width: 450px) {
+  .nav-bar nav {
+    display: block;
+  }
+}
+@media screen and (min-width: 450px) {
+  .nav-bar nav {
+    display: inline-block;
+  }
+}
+.nav-bar nav li {
+  padding-right: 2em;
+}
+.nav-bar nav li:last-child a {
+  color: #5BACC3;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 33px;
+  font-weight: 300;
+}
+
+nav {
+  font-size: 21px;
+}
+nav ul {
+  list-style-type: none;
+}
+@media screen and (max-width: 450px) {
+  nav li {
+    margin-left: 10%;
+  }
+}
+@media screen and (min-width: 450px) {
+  nav li {
+    display: inline;
+  }
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 180px;
+  padding: 20px;
+  background-color: #5BACC3;
+  color: white;
+  border: 0px;
+  font-size: 21px;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  transition: box-shadow 0.15s, transform 0.15s;
+  touch-action: manipulation;
+  will-change: box-shadow, transform;
+}
+.btn:hover {
+  box-shadow: 4px 4px 4px gray;
+  transform: translateX(-2px) translateY(-2px);
+}
+.btn:active {
+  box-shadow: 3px 3px 3px rgb(0, 75, 73) inset;
+  transform: translateX(2px) translateY(2px);
+}
+
+main .btn {
+  margin: 0 auto;
+}
+
+.icon {
+  min-width: 50px;
+  max-width: 120px;
+}
+
+.price {
+  margin: 0 auto;
+  color: #5BACC3;
+}/*# sourceMappingURL=global.css.map */

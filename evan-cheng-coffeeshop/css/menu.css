@@ -1,0 +1,72 @@
+header {
+  background-color: #FFF0ED;
+}
+
+h1 {
+  margin: 20px auto;
+  color: white;
+  text-align: center;
+  max-width: 300px;
+  max-height: 180px;
+  min-width: 280px;
+  min-height: 180px;
+  background-color: #393939;
+}
+
+.title-bg {
+  background-image: url("../assets/images/coffee-circle.jpg");
+  max-width: 100%;
+  max-height: 600px;
+  min-width: 100%;
+  min-height: 575px;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-menu {
+  text-align: center;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  background-color: #393939;
+  color: white;
+}
+.nav-menu ul {
+  margin: auto 0;
+}
+.nav-menu ul li {
+  width: 200px;
+  border-left: 4px solid #5BACC3;
+}
+.nav-menu ul li a {
+  display: inline-block;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+main section h2 {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+main section:nth-child(2n+1) {
+  background-color: #FFF0ED;
+}
+main section:nth-child(2n) {
+  background-color: #F7F7F7;
+}
+main section h2, main section h3 {
+  text-align: center;
+}
+main section .description {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+main section .price {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}/*# sourceMappingURL=menu.css.map */
