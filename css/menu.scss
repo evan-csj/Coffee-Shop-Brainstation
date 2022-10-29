@@ -4,16 +4,7 @@ header {
     background-color: $nitro-pink;
 }
 
-h1 {
-    margin: 20px auto;
-    color: white;
-    text-align: center;
-    max-width: 300px;
-    max-height: 180px;
-    min-width: 280px;
-    min-height: 180px;
-    background-color: $graphite;
-}
+
 
 .title-bg {
     background-image: url('../assets/images/coffee-circle.jpg');
@@ -23,6 +14,27 @@ h1 {
     min-height: 575px;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        text-align: center;
+        max-width: 300px;
+        max-height: 180px;
+        min-width: 280px;
+        min-height: 180px;
+        background-color: $graphite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: white;
+        }
+    }
 }
 
 .nav-menu {
@@ -32,17 +44,30 @@ h1 {
     max-height: max-content;
     background-color: $graphite;
     color: white;
+
     ul {
         margin: auto 0;
+        padding: 20px;
+        justify-content: center;
+        column-gap: 1em;
+
         li {
-            width: 200px;
-            border-left: 4px solid $nitro-blue;
             a {
+                padding-left: 1em;
                 display: inline-block;
                 color: white;
-                padding: 20px;
                 text-transform: uppercase;
+                border-left: 4px solid $nitro-blue;
             }
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        ul {
+            margin-left: 5vw;
+            align-items: flex-start;
+            flex-direction: column;
+            row-gap: 0.5em;
         }
     }
 }
