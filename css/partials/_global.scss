@@ -1,4 +1,12 @@
-@import "variables";
+$nitro-blue: #5BACC3;
+$nitro-blue-shadow: #2d5661;
+$nitro-pink: #FFF0ED;
+$light-gray: #F7F7F7;
+$graphite: #393939;
+$primary: $graphite;
+$secondary: white;
+$highlight: $nitro-blue;
+$td: 300ms;
 
 * {
     margin: 0;
@@ -49,9 +57,6 @@ a {
 }
 
 .nav-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1;
     padding: 1em 3vw;
     box-sizing: border-box;
     background-color: $nitro-pink;
@@ -95,18 +100,18 @@ a {
     }
 
     @media only screen and (max-width: 650px) {
-        flex-direction: column;
+        flex-flow: column wrap;
         nav {
             padding-left: 52px;
             ul {
-                flex-direction: column;
+                flex-flow: column wrap;
                 row-gap: 0.5em;
             }
         }
     }
 }
 
-.btn {
+a.btn {
     width: 180px;
     padding: 20px;
     background-color: $nitro-blue;
@@ -126,7 +131,7 @@ a {
     }
 
     &:active {
-        box-shadow: 3px 3px 3px rgb(0, 75, 73) inset;
+        box-shadow: 3px 3px 3px rgba($color: $nitro-blue-shadow, $alpha: 1.0) inset;
         transform: translateX(2px) translateY(2px);
     }
 }
@@ -144,11 +149,24 @@ footer {
         margin-bottom: 0.5em;
     }
 
-    p {
+    p, a {
         white-space: nowrap;
+    }
+
+    a {
+        color: $graphite;
+        font-size: 18px;
+        font-weight: 400;
     }
 
     span {
         font-weight: 700;
+    }
+
+    section:last-child {
+        div {
+            display: flex;
+            flex-wrap: nowrap;
+        }
     }
 }

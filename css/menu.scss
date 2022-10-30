@@ -1,4 +1,4 @@
-@import "variables";
+@use "./partials/global" as *;
 
 header {
     background-color: $nitro-pink;
@@ -94,6 +94,7 @@ main {
             margin: 0 auto;
             max-width: 500px;
             text-align: center;
+            padding: 0 50px;
         }
 
         .price {

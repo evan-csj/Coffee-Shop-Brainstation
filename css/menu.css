@@ -1,3 +1,150 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 33px;
+  font-weight: 300;
+}
+
+nav {
+  font-size: 21px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  min-width: 50px;
+  max-width: 120px;
+}
+
+.price {
+  margin: 0 auto;
+  color: #5BACC3;
+}
+
+.nav-bar {
+  padding: 1em 3vw;
+  box-sizing: border-box;
+  background-color: #FFF0ED;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  -moz-column-gap: 3em;
+       column-gap: 3em;
+}
+.nav-bar > a {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #393939;
+}
+.nav-bar > a img, .nav-bar > a h2 {
+  display: inline-block;
+}
+.nav-bar nav {
+  transform: translateY(-2px);
+}
+.nav-bar nav ul {
+  justify-content: flex-end;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+}
+.nav-bar nav ul li a {
+  color: #393939;
+}
+.nav-bar nav ul li:last-child a {
+  color: #5BACC3;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 650px) {
+  .nav-bar {
+    flex-flow: column wrap;
+  }
+  .nav-bar nav {
+    padding-left: 52px;
+  }
+  .nav-bar nav ul {
+    flex-flow: column wrap;
+    row-gap: 0.5em;
+  }
+}
+
+a.btn {
+  width: 180px;
+  padding: 20px;
+  background-color: #5BACC3;
+  color: white;
+  border: 0px;
+  font-size: 21px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  transition: box-shadow 0.15s, transform 0.15s;
+  touch-action: manipulation;
+  will-change: box-shadow, transform;
+}
+a.btn:hover {
+  box-shadow: 4px 4px 4px gray;
+  transform: translateX(-2px) translateY(-2px);
+}
+a.btn:active {
+  box-shadow: 3px 3px 3px #2d5661 inset;
+  transform: translateX(2px) translateY(2px);
+}
+
+footer {
+  background-color: #FFF0ED;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  -moz-column-gap: 12%;
+       column-gap: 12%;
+  row-gap: 30px;
+  padding: 5% 5vw 5% 12vw;
+}
+footer h3 {
+  margin-bottom: 0.5em;
+}
+footer p, footer a {
+  white-space: nowrap;
+}
+footer a {
+  color: #393939;
+  font-size: 18px;
+  font-weight: 400;
+}
+footer span {
+  font-weight: 700;
+}
+footer section:last-child div {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 header {
   background-color: #FFF0ED;
 }
@@ -80,6 +227,7 @@ main section .description {
   margin: 0 auto;
   max-width: 500px;
   text-align: center;
+  padding: 0 50px;
 }
 main section .price {
   text-align: center;

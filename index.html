@@ -44,63 +44,78 @@
     </header>
 
     <main>
-        <section>
-            <h2>Our Products</h2>
-        </section>
         <section class="products">
-            <article class="products__card">
-                <img src="./assets/images/coffeebeans.png" alt="coffee beans">
-                <h3>Coffee Beans</h3>
-                <p class="price">$18.99</p>
-            </article>
-            <article class="products__card">
-                <img src="./assets/images/coldbrew.png" alt="cold brew">
-                <h3>Cold Brew</h3>
-                <p class="price">$4.99</p>
-            </article>
-            <article class="products__card">
-                <img src="./assets/images/inhousebrew.png" alt="in-house brew">
-                <h3>In-house Brew</h3>
-                <p class="price">$2.99</p>
-            </article>
-        </section>
-        <section>
+            <h2>Our Products</h2>
+            <section class="containers">
+                <article class="containers__card">
+                    <img src="./assets/images/coffeebeans.png" alt="coffee beans">
+                    <h3>Coffee Beans</h3>
+                    <p class="pkg-qty">Pack of 3</p>
+                    <p class="price">$18.99</p>
+                    <div class="contrainers__card--cover"></div>
+                </article>
+                <article class="containers__card">
+                    <img src="./assets/images/coldbrew.png" alt="cold brew">
+                    <h3>Cold Brew</h3>
+                    <p class="pkg-qty">1 can</p>
+                    <p class="price">$4.99</p>
+                    <div class="contrainers__card--cover"></div>
+                </article>
+                <article class="containers__card">
+                    <img src="./assets/images/inhousebrew.png" alt="in-house brew">
+                    <h3>In-house Brew</h3>
+                    <p class="pkg-qty">1 cup</p>
+                    <p class="price">$2.99</p>
+                    <div class="contrainers__card--cover"></div>
+                </article>
+            </section>
             <a href="./pages/menu.html" class="btn">
                 View All
             </a>
         </section>
+
         <section class="discount">
-            <p>Get 20% off your first order with code: <span>FirstNitro</span></p>
+            <p onclick="copyText()">
+                Get 20% off your first order with code: <span>FirstNitro</span>
+            </p>
         </section>
     </main>
 
     <footer>
-        <div>
+        <section>
             <h3>Address</h3>
-            <p>
+            <a href="http://maps.google.com/?q=503 Broadway Penthouse, NewYork" target="_blank">
                 503 Broadway Penthouse <br>
                 NewYork
-            </p>
-        </div>
-        <div>
+            </a>
+        </section>
+        <section>
             <h3>Hours</h3>
             <p>
                 <span>Monday - Friday:</span> 9am - 7pm <br>
                 <span>Saturday - Sunday:</span> 10am - 5pm
             </p>
-        </div>
-        <div>
+        </section>
+        <section>
             <h3>Social</h3>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="./assets/logos/Facebook-Icon.svg" alt="facebook" class="icon">
-            </a>
-            <a href="https://www.yelp.com/" target="_blank">
-                <img src="./assets/logos/Yelp-Icon.svg" alt="yelp" class="icon">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="./assets/logos/Instagram-Icon.svg" alt="instagram" class="icon">
-            </a>
-        </div>
+            <div>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="./assets/logos/Facebook-Icon.svg" alt="facebook" class="icon">
+                </a>
+                <a href="https://www.yelp.com/" target="_blank">
+                    <img src="./assets/logos/Yelp-Icon.svg" alt="yelp" class="icon">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./assets/logos/Instagram-Icon.svg" alt="instagram" class="icon">
+                </a>
+            </div>
+        </section>
     </footer>
+    <script>
+        function copyText() {
+            navigator.clipboard.writeText("FirstNitro");
+            alert("Copied the code: FirstNitro");
+        }
+    </script>
 </body>
 </html>
