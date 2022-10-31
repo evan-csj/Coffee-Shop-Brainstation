@@ -43,12 +43,19 @@ p {
 }
 
 a {
+    font-size: 21px;
     text-decoration: none;
 }
 
 .icon {
     min-width: 50px;
     max-width: 120px;
+}
+
+.product-img {
+    min-height: 240px;
+    max-height: 550px;
+    padding: 20px;
 }
 
 .price {
@@ -111,28 +118,48 @@ a {
     }
 }
 
-a.btn {
+.btn {
+    position: relative;
+    box-sizing: border-box;
     width: 180px;
-    padding: 20px;
-    background-color: $nitro-blue;
-    color: white;
-    border: 0px;
-    font-size: 21px;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    transition: box-shadow 0.15s, transform 0.15s;
-    touch-action: manipulation;
-    will-change: box-shadow, transform;
+    transform: translate(7px, 7px);
+
+    a {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        border: 2px solid $graphite;
+        color: white;
+        text-transform: uppercase;
+        transform: translate(-7px, -7px);
+        transition: transform $td;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        border: 2px solid $nitro-blue;
+        background-color: $nitro-blue;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: width $td;
+    }
 
     &:hover {
-        box-shadow: 4px 4px 4px gray;
-        transform: translateX(-2px) translateY(-2px);
+        &::before {
+            animation: flash 2.5s linear infinite;
+        }
     }
 
     &:active {
-        box-shadow: 3px 3px 3px rgba($color: $nitro-blue-shadow, $alpha: 1.0) inset;
-        transform: translateX(2px) translateY(2px);
+        a {
+            transform: translate(0px, 0px);
+        }
     }
 }
 
@@ -168,5 +195,29 @@ footer {
             display: flex;
             flex-wrap: nowrap;
         }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash {
+    0% {
+        border-color: $nitro-blue;
+        background-color: $nitro-blue;
+    }
+    50% {
+        border-color: $graphite;
+        background-color: $graphite;
+    }
+    100% {
+        border-color: $nitro-blue;
+        background-color: $nitro-blue;
     }
 }

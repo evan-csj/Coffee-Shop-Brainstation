@@ -15,6 +15,7 @@
                 <img src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="coffee bean logo" class="icon">
                 <h2>nitro</h2>
             </a>
+
             <nav>
                 <ul>
                     <li>
@@ -29,14 +30,18 @@
                 </ul>
             </nav>
         </section>
+
         <section class="hero">
             <div class="hero__text">
                 <h1>Nitro Coffee</h1>
                 <p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.</p>
-                <a href="./pages/menu.html" class="btn">
-                    Shop Now
-                </a>
+                <div class="btn">
+                    <a href="./pages/menu.html">
+                        Shop Now
+                    </a>
+                </div>
             </div>
+
             <div class="hero__img">
                 <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag">
             </div>
@@ -46,36 +51,65 @@
     <main>
         <section class="products">
             <h2>Our Products</h2>
+
             <section class="containers">
                 <article class="containers__card">
-                    <img src="./assets/images/coffeebeans.png" alt="coffee beans">
+                    <img src="./assets/images/coffeebeans.png" alt="coffee beans" class="product-img">
                     <h3>Coffee Beans</h3>
                     <p class="pkg-qty">Pack of 3</p>
                     <p class="price">$18.99</p>
                     <div class="contrainers__card--cover"></div>
                 </article>
+
                 <article class="containers__card">
-                    <img src="./assets/images/coldbrew.png" alt="cold brew">
+                    <img src="./assets/images/coldbrew.png" alt="cold brew" class="product-img">
                     <h3>Cold Brew</h3>
                     <p class="pkg-qty">1 can</p>
                     <p class="price">$4.99</p>
                     <div class="contrainers__card--cover"></div>
                 </article>
+
                 <article class="containers__card">
-                    <img src="./assets/images/inhousebrew.png" alt="in-house brew">
+                    <img src="./assets/images/inhousebrew.png" alt="in-house brew" class="product-img">
                     <h3>In-house Brew</h3>
                     <p class="pkg-qty">1 cup</p>
                     <p class="price">$2.99</p>
                     <div class="contrainers__card--cover"></div>
                 </article>
             </section>
-            <a href="./pages/menu.html" class="btn">
-                View All
-            </a>
+
+            <div class="btn">
+                <a href="./pages/menu.html">
+                    View All
+                </a>
+            </div>
         </section>
 
         <section class="discount">
-            <p onclick="copyText()">
+            <div class="discount__info">
+                <div class="different">
+                    <h2>We're Different</h2>
+                    <p>We grow and roast our own beans. Every bean, every cup, every step of the way, we strive for excellence.</p>
+                    <div>
+                        <img src="./assets/logos/planting.svg" alt="planting" class="icon">
+                        <img src="./assets/logos/coffee-beans.svg" alt="coffee-beans" class="icon">
+                        <img src="./assets/logos/coffee-cup.svg" alt="coffee-cup" class="icon">
+                    </div>
+
+                    <div class="btn">
+                        <a href="./index.html">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tilted-can-box">
+                    <img src="./assets/images/tiltedcan.png" alt="tilted can" class="tilted-can-box__can product-img">
+                    <img src="./assets/images/coldbrewbackground.png" alt="cold brew background" class="tilted-can-box__bg">
+                </div>
+            </div>
+
+            <p onclick="copyText()" class="discount__code">
                 Get 20% off your first order with code: <span>FirstNitro</span>
             </p>
         </section>

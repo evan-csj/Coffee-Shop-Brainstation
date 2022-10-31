@@ -32,12 +32,19 @@ p {
 }
 
 a {
+  font-size: 21px;
   text-decoration: none;
 }
 
 .icon {
   min-width: 50px;
   max-width: 120px;
+}
+
+.product-img {
+  min-height: 240px;
+  max-height: 550px;
+  padding: 20px;
 }
 
 .price {
@@ -93,27 +100,42 @@ a {
   }
 }
 
-a.btn {
+.btn {
+  position: relative;
+  box-sizing: border-box;
   width: 180px;
-  padding: 20px;
-  background-color: #5BACC3;
-  color: white;
-  border: 0px;
-  font-size: 21px;
+  transform: translate(7px, 7px);
+}
+.btn a {
+  position: relative;
   display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 0;
   text-align: center;
+  border: 2px solid #393939;
+  color: white;
   text-transform: uppercase;
-  transition: box-shadow 0.15s, transform 0.15s;
-  touch-action: manipulation;
-  will-change: box-shadow, transform;
+  transform: translate(-7px, -7px);
+  transition: transform 300ms;
 }
-a.btn:hover {
-  box-shadow: 4px 4px 4px gray;
-  transform: translateX(-2px) translateY(-2px);
+.btn::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid #5BACC3;
+  background-color: #5BACC3;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: width 300ms;
 }
-a.btn:active {
-  box-shadow: 3px 3px 3px #2d5661 inset;
-  transform: translateX(2px) translateY(2px);
+.btn:hover::before {
+  -webkit-animation: flash 2.5s linear infinite;
+          animation: flash 2.5s linear infinite;
+}
+.btn:active a {
+  transform: translate(0px, 0px);
 }
 
 footer {
@@ -145,11 +167,56 @@ footer section:last-child div {
   flex-wrap: nowrap;
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    border-color: #5BACC3;
+    background-color: #5BACC3;
+  }
+  50% {
+    border-color: #393939;
+    background-color: #393939;
+  }
+  100% {
+    border-color: #5BACC3;
+    background-color: #5BACC3;
+  }
+}
+@keyframes flash {
+  0% {
+    border-color: #5BACC3;
+    background-color: #5BACC3;
+  }
+  50% {
+    border-color: #393939;
+    background-color: #393939;
+  }
+  100% {
+    border-color: #5BACC3;
+    background-color: #5BACC3;
+  }
+}
 header {
   background-color: #FFF0ED;
 }
 
-.title-bg {
+.hero {
   background-image: url("../assets/images/coffee-circle.jpg");
   max-width: 100%;
   max-height: 600px;
@@ -162,19 +229,43 @@ header {
   justify-content: center;
   align-items: center;
 }
-.title-bg div {
+.hero .title-bg {
+  position: relative;
+  box-sizing: border-box;
   text-align: center;
   max-width: 300px;
   max-height: 180px;
   min-width: 280px;
   min-height: 180px;
-  background-color: #393939;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.title-bg div h1 {
+.hero .title-bg h1 {
   color: white;
+  z-index: 1;
+}
+.hero .title-bg__border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #5BACC3;
+  background-color: transparent;
+  z-index: 1;
+}
+.hero .title-bg__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 10px;
+  top: 10px;
+  background-color: #393939;
+  border: 5px solid #393939;
+  transition: transform 300ms;
+}
+.hero .title-bg__border:hover + div {
+  transform: translate(-15px, -15px);
 }
 
 .nav-menu {
