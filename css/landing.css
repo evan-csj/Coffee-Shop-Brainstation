@@ -41,6 +41,12 @@ a {
   max-width: 120px;
 }
 
+.background-icon {
+  width: 120px;
+  opacity: 0.25;
+  padding: 20px;
+}
+
 .product-img {
   min-height: 240px;
   max-height: 550px;
@@ -117,7 +123,7 @@ a {
   color: white;
   text-transform: uppercase;
   transform: translate(-7px, -7px);
-  transition: transform 300ms;
+  transition: transform 150ms;
 }
 .btn::before {
   content: "";
@@ -128,7 +134,7 @@ a {
   width: 100%;
   height: 100%;
   z-index: -1;
-  transition: width 300ms;
+  transition: width 150ms;
 }
 .btn:hover::before {
   -webkit-animation: flash 2.5s linear infinite;
@@ -139,12 +145,14 @@ a {
 }
 
 footer {
+  position: relative;
+  overflow: hidden;
   background-color: #FFF0ED;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  -moz-column-gap: 12%;
-       column-gap: 12%;
+  -moz-column-gap: 15%;
+       column-gap: 15%;
   row-gap: 30px;
   padding: 5% 5vw 5% 12vw;
 }
@@ -165,6 +173,16 @@ footer span {
 footer section:last-child div {
   display: flex;
   flex-wrap: nowrap;
+}
+footer .footer-top-left {
+  position: absolute;
+  top: 0;
+  left: -60px;
+}
+footer .footer-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
 }
 
 @-webkit-keyframes rotate {
@@ -273,7 +291,7 @@ footer section:last-child div {
   display: grid;
   grid-template-rows: 6fr 1fr 1fr;
   grid-template-columns: 2fr 1fr;
-  transition: box-shadow 300ms, transform 300ms;
+  transition: box-shadow 150ms, transform 150ms;
   touch-action: manipulation;
   will-change: box-shadow, transform;
 }
@@ -296,7 +314,7 @@ footer section:last-child div {
   grid-column: 2;
   font-size: 33px;
   margin: auto 0;
-  transition: rotate 300ms;
+  transition: rotate 150ms;
 }
 .containers__card div {
   position: absolute;
@@ -305,21 +323,20 @@ footer section:last-child div {
   height: 360px;
   z-index: -1;
   top: 300px;
-  transition: rotate 300ms, transform 300ms;
+  transition: transform 150ms;
 }
 .containers__card:hover {
   box-shadow: 0 5px 5px -1px rgba(0, 0, 0, 0.5), 0 10px 15px -1px rgba(0, 0, 0, 0.25);
   transform: translateY(-5px);
 }
 .containers__card:hover div {
-  rotate: -30deg;
-  transform: translateY(34px);
+  transform: skew(0, -35deg);
 }
 .containers__card:hover h3 {
   text-shadow: 1px 1px rgba(128, 128, 128, 0.5), 2px 2px rgba(128, 128, 128, 0.4), 3px 3px rgba(128, 128, 128, 0.3), 4px 4px rgba(128, 128, 128, 0.2), 5px 5px rgba(128, 128, 128, 0.1);
 }
 .containers__card:hover .price {
-  rotate: -30deg;
+  rotate: -35deg;
 }
 
 .discount {

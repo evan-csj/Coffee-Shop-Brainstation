@@ -6,7 +6,7 @@ $graphite: #393939;
 $primary: $graphite;
 $secondary: white;
 $highlight: $nitro-blue;
-$td: 300ms;
+$td: 150ms;
 
 * {
     margin: 0;
@@ -50,6 +50,12 @@ a {
 .icon {
     min-width: 50px;
     max-width: 120px;
+}
+
+.background-icon {
+    width: 120px;
+    opacity: 0.25;
+    padding: 20px;
 }
 
 .product-img {
@@ -164,11 +170,13 @@ a {
 }
 
 footer {
+    position: relative;
+    overflow: hidden;
     background-color: $nitro-pink;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    column-gap: 12%;
+    column-gap: 15%;
     row-gap: 30px;
     padding: 5% 5vw 5% 12vw;
 
@@ -195,6 +203,17 @@ footer {
             display: flex;
             flex-wrap: nowrap;
         }
+    }
+
+    .footer-top-left {
+        position: absolute;
+        top: 0;
+        left: -60px;
+    }
+    .footer-bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: -60px;
     }
 }
 
