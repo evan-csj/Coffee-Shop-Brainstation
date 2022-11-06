@@ -127,8 +127,8 @@ a {
 }
 .nav-bar nav ul {
   justify-content: flex-end;
-  -moz-column-gap: 2em;
-       column-gap: 2em;
+  -moz-column-gap: 1.5em;
+       column-gap: 1.5em;
 }
 .nav-bar nav ul li a {
   color: #393939;
